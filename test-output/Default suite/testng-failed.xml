@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.tests.automationSalesforce.contacts">
+        <methods>
+          <include name="recentContacts"/>
+          <include name="createNewContact"/>
+          <include name="lunch"/>
+          <include name="checkCancelButton"/>
+          <include name="newViewConactPage"/>
+          <include name="close"/>
+          <include name="errorMessageInNewView"/>
+          <include name="myContactsView"/>
+          <include name="viewContacts"/>
+          <include name="checksaveAndButton"/>
+        </methods>
+      </class> <!-- com.tests.automationSalesforce.contacts -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="8" name="Test">
+    <classes>
+      <class name="com.tests.automationSalesforce.CreateOpty"/>
+      <class name="com.tests.automationSalesforce.UserMenuDropDown"/>
+      <class name="com.tests.automationSalesforce.Randomscenarios"/>
+      <class name="com.tests.automationSalesforce.Leads"/>
+      <class name="com.tests.automationSalesforce.SfdcLogin"/>
+      <class name="com.tests.automationSalesforce.contacts"/>
+      <class name="com.tests.automationSalesforce.CreateAccount"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
