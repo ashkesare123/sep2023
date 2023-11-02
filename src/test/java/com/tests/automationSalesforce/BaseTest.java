@@ -111,6 +111,16 @@ driver.close();
 }
    }
 
+	public static void moveToElementAction(WebElement ele,String objectName) {
+		Actions action =new Actions(driver);
+		action.moveToElement(ele).build().perform();
+		System.out.println("Cursor is moved to Web Element"+objectName);
+	
+	}
+	public static void ContextClickAction(WebElement ele,String objName) {
+		Actions action =new Actions(driver);
+		action.contextClick().build().perform();
+		System.out.println("Right click is performed on webElement");
 		
 			
    
