@@ -98,7 +98,12 @@ public class BaseTest {
 		driver.findElement(By.xpath("//*[@id=\"tryLexDialogX\"]")).click();}
 			}
    
+public static void waitUntilPageLoad() {
+	System.out.println("waiting until pageloads with 30 sec maximum time");
+	driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	
+			}
+   	
 		
 public static void closeBrowser() throws  InterruptedException
 {
