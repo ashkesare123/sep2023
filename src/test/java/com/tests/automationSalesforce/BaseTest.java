@@ -146,6 +146,36 @@ driver.close();
 	
 
 
+public static void waitForAlertPresent(int time) {
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(8));
+	wait.until(ExpectedConditions.alertIsPresent());
+
+}
+
+public static void switchToWindowOpened(String mainWindowHandle) {
+	Set<String> allwindowHandles=driver.getWindowHandles();
+	for(String handle: allwindowHandles) {
+	if(!mainWindowHandle.equalsIgnoreCase(handle));
+	driver.switchTo().window(handle);}
+}
+	public static void dismissalert() throws InterruptedException{
+		Alert alert=switchToAlert();
+		alert.dismiss();
+		System.out.println("Alert dismissed");
+
+public static void waitUntilElementToBeClicked(By locator,String objname) {
+		System.out.println("waiting for webelement"+objname+ " to be clickable");
+		wait=new WebDriverWait(driver,Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
+	
+	public static void WaitUntilPresenceofElementLocatedBy(By locator,String objname) {
+		System.out.println("waiting for web element"+objname+"for its visibility");
+		wait=new WebDriverWait(driver,Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		
+	
+}
 	
 
 
