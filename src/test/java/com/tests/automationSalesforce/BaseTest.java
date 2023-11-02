@@ -178,4 +178,58 @@ public static void waitUntilElementToBeClicked(By locator,String objname) {
 }
 	
 
+	public static String getPageTitle() {
+		return driver.getTitle();
+
+public static void waitForVisibility(WebElement ele,int time,int pollingtime,String objectName) {
+		FluentWait<WebDriver> wait=new FluentWait<WebDriver>(driver);
+		wait.withTimeout(Duration.ofSeconds(time))
+		.pollingEvery(Duration.ofSeconds(pollingtime))
+		.ignoring(ElementNotInteractableException.class);
+		
+		wait.until(ExpectedConditions.visibilityOf(ele));
+		System.out.println(objectName+" is waited for visibility using fluent wait");
+	}
+
+
+
+	public static void dismissalert() throws InterruptedException{
+		Alert alert=switchToAlert();
+		alert.dismiss();
+		System.out.println("Alert dismissed");
+
+			
+	}
+	public static void ContextClickAction(WebElement ele,String objName) {
+		Actions action =new Actions(driver);
+		action.contextClick().build().perform();
+		System.out.println("Right click is performed on webElement");
+
+
+	}
+	public static void goToUrl(String url) {
+		driver.get(url);
+		System.out.println(url+ "is entered");
+	}
+	
+	public static void maximiseBrowser() {
+		driver.manage().window().maximize();
+		System.out.println("browser window has maximized");
+	}
+ 
+ 
+	
+	public static String getPageTitle() {
+		return driver.getTitle();
+		
+		
+
+
+
+
+
+
+
+
+
 
