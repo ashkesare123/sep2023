@@ -54,7 +54,7 @@ public class contacts extends BaseTest{
 		String actual_NewContactPage=getText("//h2[@class=\"pageDescription\"]");
 		Assert.assertEquals(expected_NewcontactPage, actual_NewContactPage);
 		String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new java.util.Date());
-		String lastName="konyala"+timeStamp;
+		String lastName="Shinde"+timeStamp;
 		String accountName="myNewAccount1";
 		sendKeys("//input[@name=\"name_lastcon2\"]",lastName);
 		sendKeys("//input[@name=\"con4\"]",accountName);
@@ -72,8 +72,8 @@ public class contacts extends BaseTest{
 		
 		createNewViewAssertion();
 		String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new java.util.Date());
-		String viewName="konyala"+timeStamp;
-		String viewUniqueName="rani"+timeStamp;
+		String viewName="Shinde"+timeStamp;
+		String viewUniqueName="ashu"+timeStamp;
 		sendKeys("//*[@id=\"fname\"]",viewName);
 		sendKeys("//*[@id=\"devname\"]",viewUniqueName);
 		waiting();
