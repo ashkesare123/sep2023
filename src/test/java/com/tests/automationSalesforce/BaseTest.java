@@ -122,8 +122,28 @@ driver.close();
 		action.contextClick().build().perform();
 		System.out.println("Right click is performed on webElement");
 		
-			
-   
+	}		
+   public static void selectByTextData(WebElement element ,String text,String objName) {
+		Select selectCity =new Select(element);
+		selectCity.selectByVisibleText(text);
+		System.out.println(objName  + "selected" + text);
+		
+		
+	}
+	
+	public static void selectByIndexData(WebElement element, int index, String ObjName) {
+		waitForVisibility(element,5,ObjName);
+		Select selectCity=new Select(element);
+		selectCity.selectByIndex(index);
+		System.out.println(ObjName  + "selected with index=" +index);
+		
+	}
+	public static void selectByValueData(WebElement element ,String text,String objName) {
+		Select selectCity=new Select(element);
+		selectCity.selectByValue(text);
+		System.out.println(objName + "selected ");
+	}
+	
 
 
 	
